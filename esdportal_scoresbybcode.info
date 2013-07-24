@@ -1,0 +1,4 @@
+name = School scores by bcode page
+description = Provide a page at /schoolscores/% that displays relevant scores to school admins
+package = ESD custom
+core = 7.x
