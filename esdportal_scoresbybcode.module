@@ -32,7 +32,52 @@ function esdportal_scoresbybcode_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['schoolscores/contact'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('esdportal_scoresbybcode_form'),
+    'access arguments' => array('access school scores'),
+    'title' => 'School score feedback',
+  );
+
+  $items['admin/config/esdportal_scoresbycode'] = array(
+    'title' => t('School Scores Page Settings'),
+    'description' => t('Change the email destination and alert message at schoolscores/%'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('esdportal_scoresbybcode_admin'),
+    'access arguments' => array('administer nodes'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
   return $items;
+}
+
+/**
+ * Allow for custom top message and email destination.
+ */
+function esdportal_scoresbybcode_admin() {
+  $form = array();
+
+  $form['esdportal_scoresbycode_alert'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Alert message'),
+    '#description' => t('This message will display above the school scores.'),
+    '#max_length' => 256,
+    '#size' => 20,
+    '#required' => TRUE,
+    '#default_value' => variable_get('esdportal_scoresbycode_alert', t('Please review these scores.')),
+  );
+
+  $form['esdportal_scoresbycode_email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Target email'),
+    '#description' => t('Comment form responses will be sent to this email address.'),
+    '#max_length' => 100,
+    '#size' => 20,
+    '#required' => TRUE,
+    '#default_value' => variable_get('esdportal_scoresbycode_email', 'eanderson@excellentschoolsdetroit.org'),
+  );
+
+  return system_settings_form($form);
 }
 
 function esdportal_scoresbybcode_page($bcode) {
@@ -73,6 +118,14 @@ function esdportal_scoresbybcode_page($bcode) {
     ),
   );
 
+  $message = array(
+    'alert' => array(
+      '#type' => 'markup',
+      '#markup' => '<div class="messages instruction">' . variable_get('esdportal_scoresbycode_alert') . '</div>',
+    ),
+  );
+  $message = drupal_render($message);
+
   $tables = '';
   // Build tables
   foreach ($fieldgroups as $groupname => &$data) {
@@ -87,16 +140,90 @@ function esdportal_scoresbybcode_page($bcode) {
         $value,
       );
     }
-
     $tables .= theme('table', array('header' => $header, 'rows' => $rows));
   }
 
+  $form = drupal_render(drupal_get_form('esdportal_scoresbybcode_form'));
+
+  $content = $message . $tables . $form;
+
   $render_array['esdportal_scoresbybcode_page'] = array(
     '#type' => 'markup',
-    '#markup' => $tables,
+    '#markup' => $content,
     '#title' => t('Grade Report for @bcode', array('@bcode' => $bcode)),
   );
 
   return $render_array;
+}
+
+/**
+ * Provide a contact form for school score by bcode page
+ * Should only be displayed in block form, for the most part, but also has a menu entry...
+ */
+function esdportal_scoresbybcode_form() {
+  $form['intro'] = array(
+    '#markup' => 'Description/help text. Please note that...',
+  );
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name'),
+    '#required' => TRUE,
+  );
+  $form['email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email'),
+    '#required' => TRUE,
+  );
+  $form['comments'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Comments'),
+    '#required' => TRUE,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+  );
+
+  return $form;
+}
+
+/**
+ * Implements hook_form_validate().
+ */
+function esdportal_scoresbybcode_form_validate($form, &$form_state) {
+  if (!valid_email_address($form_state['values']['email'])) {
+    form_set_error('email', t('Please provide a valid email address.'));
+  }
+}
+
+/**
+ * Implements hook_form_submit().
+ */
+function esdportal_scoresbybcode_form_submit($form, &$form_state) {
+  global $user;
+
+  $vals = $form_state['values'];
+
+  $module = 'esdportal_scoresbycode';
+  $key = 'school_score_feedback';
+  $to = $vals['email'];
+  $from = variable_get('esdportal_scoresbybcode_email', 'eanderson@excellentschoolsdetroit.org');
+
+  $message = drupal_mail($module, $key, $to, language_default(), $vals, $from, FALSE);
+  $message['subject'] = t('School score feedback from user @username', array('@username' => $user->name));
+  $message['body'] = t('@name <@email> wrote:', array('@name' => $vals['name'], '@email' => $vals['email'])) . "\n\n" . $vals['comments'];
+  $message['body'] .= "\n\n--\n" . t('Submitted by user @user from @url', array('@user' => $user->name, '@url' => $_SERVER['REQUEST_URI']));
+
+  $system = drupal_mail_system($module, $key);
+
+  $message['result'] = $system->mail($message);
+
+
+  if ($message['result'] == TRUE) {
+    drupal_set_message(t('Thank you for providing school score feedback.'));
+  }
+  else {
+    drupal_set_message(t('There was a problem sending your feedback.'), 'error');
+  }
 }
 
