@@ -39,7 +39,7 @@ function esdportal_scoresbybcode_menu() {
     'title' => 'School score feedback',
   );
 
-  $items['admin/config/esdportal_scoresbycode'] = array(
+  $items['admin/config/esdportal_scoresbybcode'] = array(
     'title' => t('School Scores Page Settings'),
     'description' => t('Change the email destination and alert message at schoolscores/%'),
     'page callback' => 'drupal_get_form',
@@ -57,24 +57,24 @@ function esdportal_scoresbybcode_menu() {
 function esdportal_scoresbybcode_admin() {
   $form = array();
 
-  $form['esdportal_scoresbycode_alert'] = array(
+  $form['esdportal_scoresbybcode_alert'] = array(
     '#type' => 'textfield',
     '#title' => t('Alert message'),
     '#description' => t('This message will display above the school scores.'),
     '#max_length' => 256,
     '#size' => 20,
     '#required' => TRUE,
-    '#default_value' => variable_get('esdportal_scoresbycode_alert', t('Please review these scores.')),
+    '#default_value' => variable_get('esdportal_scoresbybcode_alert', t('Please review these scores.')),
   );
 
-  $form['esdportal_scoresbycode_email'] = array(
+  $form['esdportal_scoresbybcode_email'] = array(
     '#type' => 'textfield',
     '#title' => t('Target email'),
     '#description' => t('Comment form responses will be sent to this email address.'),
     '#max_length' => 100,
     '#size' => 20,
     '#required' => TRUE,
-    '#default_value' => variable_get('esdportal_scoresbycode_email', 'eanderson@excellentschoolsdetroit.org'),
+    '#default_value' => variable_get('esdportal_scoresbybcode_email', 'eanderson@excellentschoolsdetroit.org'),
   );
 
   return system_settings_form($form);
@@ -121,7 +121,7 @@ function esdportal_scoresbybcode_page($bcode) {
   $message = array(
     'alert' => array(
       '#type' => 'markup',
-      '#markup' => '<div class="messages instruction">' . variable_get('esdportal_scoresbycode_alert') . '</div>',
+      '#markup' => '<div class="messages instruction">' . variable_get('esdportal_scoresbybcode_alert') . '</div>',
     ),
   );
   $message = drupal_render($message);
@@ -204,7 +204,7 @@ function esdportal_scoresbybcode_form_submit($form, &$form_state) {
 
   $vals = $form_state['values'];
 
-  $module = 'esdportal_scoresbycode';
+  $module = 'esdportal_scoresbybcode';
   $key = 'school_score_feedback';
   $to = $vals['email'];
   $from = variable_get('esdportal_scoresbybcode_email', 'eanderson@excellentschoolsdetroit.org');
