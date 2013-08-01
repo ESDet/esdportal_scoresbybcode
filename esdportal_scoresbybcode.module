@@ -67,6 +67,19 @@ function esdportal_scoresbybcode_admin() {
     '#default_value' => variable_get('esdportal_scoresbybcode_alert', t('Please review these scores.')),
   );
 
+  $form['esdportal_scoresbybcode_alerttype'] = array(
+    '#type' => 'select',
+    '#title' => t('Alert message type'),
+    '#required' => TRUE,
+    '#options' => array(
+      'instruction' => t('Instruction'),
+      'status' => t('Status'),
+      'warning' => t('Warning'),
+      'error' => t('Error'),
+    ),
+    '#default_value' => variable_get('esdportal_scoresbybcode_alerttype', 'instruction'),
+  );
+
   $form['esdportal_scoresbybcode_email'] = array(
     '#type' => 'textfield',
     '#title' => t('Target email'),
@@ -121,7 +134,7 @@ function esdportal_scoresbybcode_page($bcode) {
   $message = array(
     'alert' => array(
       '#type' => 'markup',
-      '#markup' => '<div class="messages instruction">' . variable_get('esdportal_scoresbybcode_alert') . '</div>',
+      '#markup' => '<div class="messages ' . variable_get('esdportal_scoresbybcode_alerttype') . '">' . variable_get('esdportal_scoresbybcode_alert') . '</div>',
     ),
   );
   $message = drupal_render($message);
