@@ -219,8 +219,8 @@ function esdportal_scoresbybcode_form_submit($form, &$form_state) {
 
   $module = 'esdportal_scoresbybcode';
   $key = 'school_score_feedback';
-  $to = $vals['email'];
-  $from = variable_get('esdportal_scoresbybcode_email', 'eanderson@excellentschoolsdetroit.org');
+  $to = variable_get('esdportal_scoresbybcode_email', 'eanderson@excellentschoolsdetroit.org');
+  $from = $vals['email'];
 
   $message = drupal_mail($module, $key, $to, language_default(), $vals, $from, FALSE);
   $message['subject'] = t('School score feedback from user @username', array('@username' => $user->name));
