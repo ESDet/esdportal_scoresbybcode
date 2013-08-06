@@ -531,7 +531,7 @@ grade, rather may earn a “Promising” designation by:
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
       <P STYLE="margin-bottom: 0.11in"><?php print $data['net5e_1213_pts']; ?>
       /
-      <?php print $data['net5e_1213_ptsps']; ?>
+      <?php print $data['net5e_1213_psspts']; ?>
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
       <BR>
@@ -574,7 +574,7 @@ grade, rather may earn a “Promising” designation by:
     </TD>
   </TR>
   <TR>
-    <TD>
+    <TD ROWSPAN=2>
       Challenge Factor
       (Socio-economic Status, Special Education, English Language
       Learners)
@@ -988,7 +988,6 @@ grade, rather may earn a “Promising” designation by:</p>
       Other Points (Bonus)
     </TD>
     <TD>
-      D STYLE="border: none; padding: 0in">
       <BR>
       
     </TD>
@@ -1216,7 +1215,7 @@ grade, rather may earn a “Promising” designation by:</p>
     </TD>
     <TD>
       <?php print $data['site_s_pts']; ?> /
-      <?php print $data['site_s_psspts']; ?>
+      <?php print $data['site_s_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1250,7 +1249,7 @@ grade, rather may earn a “Promising” designation by:</p>
     </TD>
     <TD>
       <?php print $data['five_e_grwth_pts']; ?> /
-      <?php print $data['five_e_grwth_psspts']; ?>
+      <?php print $data['five_e_grwth_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1279,7 +1278,7 @@ grade, rather may earn a “Promising” designation by:</p>
     </TD>
   </TR>
   <TR>
-    <TD>
+    <TD ROWSPAN=2>
       Challenge Factor
       (Socio-economic Status, Special Education, English Language
       Learners)
