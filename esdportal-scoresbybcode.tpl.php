@@ -7,233 +7,232 @@
 <?php $data = $hs_data; ?>
 
 <?php if ($school_status == 'Mature'): ?>
-<P STYLE="margin-bottom: 0.11in">High
-Schools are graded using the following scale:</P>
+<p>High Schools are graded using the following scale:</p>
 <TABLE>
   <COL>
   <COL>
   <TR>
     <TD>
-      <P>Grading Scale</P>
+      Grading Scale
     </TD>
     <TD>
-      <P><BR>
-      </P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P> A+</P>
-    </TD>
-    <TD>
-      <P>.90 to 1</P>
+      <BR>
+      
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>A</P>
+       A+
     </TD>
     <TD>
-      <P>.76 to &lt;
-      .90</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>B+</P>
-    </TD>
-    <TD>
-      <P>.70 to &lt;
-      .76</P>
+      .90 to 1
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>B</P>
+      A
     </TD>
     <TD>
-      <P>.60 to &lt;
-      .70</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>C+</P>
-    </TD>
-    <TD>
-      <P>.55 to &lt;
-      .60</P>
+      .76 to &lt;
+      .90
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>C</P>
+      B+
     </TD>
     <TD>
-      <P>.45 to &lt;
-      .55</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>D</P>
-    </TD>
-    <TD>
-      <P>&gt; .30 to &lt;
-      .45</P>
+      .70 to &lt;
+      .76
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>F</P>
+      B
     </TD>
     <TD>
-      <P>0 to .30</P>
+      .60 to &lt;
+      .70
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      C+
+    </TD>
+    <TD>
+      .55 to &lt;
+      .60
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      C
+    </TD>
+    <TD>
+      .45 to &lt;
+      .55
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      D
+    </TD>
+    <TD>
+      &gt; .30 to &lt;
+      .45
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      F
+    </TD>
+    <TD>
+      0 to .30
     </TD>
   </TR>
 </TABLE>
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <TABLE>
   <COL>
   <COL>
   <TR>
     <TD>
-      <P><B>Total
-      Points (100  Points)</B></P>
+      Total
+      Points (100  Points)
     </TD>
     <TD>
-      <P ALIGN=RIGHT>&nbsp;</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>&nbsp;</P>
-    </TD>
-    <TD>
-      <P ALIGN=RIGHT><I>Points Possible</I></P>
+      &nbsp;
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Status</P>
+      &nbsp;
     </TD>
     <TD>
-      <P ALIGN=RIGHT>50</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Progress</P>
-    </TD>
-    <TD>
-      <P ALIGN=RIGHT>20</P>
+      <I>Points Possible</I>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>School Culture</P>
+      Academic Status
     </TD>
     <TD>
-      <P ALIGN=RIGHT>30</P>
+      50
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Total</P>
+      Academic Progress
     </TD>
     <TD>
-      <P ALIGN=RIGHT>100</P>
+      20
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      School Culture
+    </TD>
+    <TD>
+      30
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Total
+    </TD>
+    <TD>
+      100
     </TD>
   </TR>
 </TABLE>
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <TABLE>
   <COL style="width:16em">
   <COL>
   <COL>
   <TR>
     <TD>
-      <P><B>Cumulative Grade</B></P>
+      Cumulative Grade
     </TD>
     <TD>
-      <P><B><?php print $data['total_pts']; ?> /
-      <?php print $data['total_psspts']; ?> = <?php print $data['mature_pct']; ?></B></P>
+      <?php print $data['total_pts']; ?> /
+      <?php print $data['total_psspts']; ?> = <?php print $data['mature_pct']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['mature_ltrgrade']; ?></B></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Status Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_ltrgrade']; ?></P>
+      <?php print $data['mature_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Progress Grade</P>
+      Academic Status Grade
     </TD>
     <TD>
-      <P><?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?></P>
+      <?php print $data['status_pts']; ?> /
+      <?php print $data['status_psspts']; ?>
     </TD>
     <TD>
-      <P><?php print $data['progress_ltrgrade']; ?></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>School Climate Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_ltrgrade']; ?></P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Other Points (Bonus)</P>
+      Academic Progress Grade
     </TD>
     <TD>
-      <P><?php print $data['studchrs_pts']; ?> +
-      <?php print $data['fafsa_rate_pts']; ?></P>
+      <?php print $data['progress_pts']; ?> /
+      <?php print $data['progress_psspts']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <?php print $data['progress_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      School Climate Grade
+    </TD>
+    <TD>
+      <?php print $data['culture_pts']; ?> /
+      <?php print $data['culture_psspts']; ?>
+    </TD>
+    <TD>
+      <?php print $data['culture_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Other Points (Bonus)
+    </TD>
+    <TD>
+      <?php print $data['studchrs_pts']; ?> +
+      <?php print $data['fafsa_rate_pts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 
 <?php endif; if ($school_status == 'New'): ?>
 
 <P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
 Your school is classified as a
 “New School.” New Schools do not earn a cumulative grade, rather
-may earn a “Promising” designation by:</P>
+may earn a “Promising” designation by:
 <OL>
   <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
   having participated in at
   least 60 of the possible 100 points, and earned 60% of the available
-  points, <B>OR</B></P>
+  points, OR
   <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
   having received an “A” in
-  one of the 3 categories.</P>
+  one of the 3 categories.
 </OL>
 <TABLE>
   <COL style="width:16em">
@@ -241,68 +240,68 @@ may earn a “Promising” designation by:</P>
   <COL>
   <TR>
     <TD>
-      <P><B>Cumulative Grade</B></P>
+      Cumulative Grade
     </TD>
     <TD>
-      <P><B><?php print $data['total_pts']; ?> /
-      <?php print $data['total_psspts']; ?> = <?php print $data['newschool_pct']; ?></B></P>
+      <?php print $data['total_pts']; ?> /
+      <?php print $data['total_psspts']; ?> = <?php print $data['newschool_pct']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['newschool_designation']; ?></B></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Status Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_ltrgrade']; ?></P>
+      <?php print $data['newschool_designation']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Progress Grade</P>
+      Academic Status Grade
     </TD>
     <TD>
-      <P><?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?></P>
+      <?php print $data['status_pts']; ?> /
+      <?php print $data['status_psspts']; ?>
     </TD>
     <TD>
-      <P><?php print $data['progress_ltrgrade']; ?></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>School Climate Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_ltrgrade']; ?></P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Other Points (Bonus)</P>
+      Academic Progress Grade
     </TD>
     <TD>
-      <P><?php print $data['studchrs_pts']; ?> +
-      <?php print $data['fafsa_rate_pts']; ?></P>
+      <?php print $data['progress_pts']; ?> /
+      <?php print $data['progress_psspts']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <?php print $data['progress_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      School Climate Grade
+    </TD>
+    <TD>
+      <?php print $data['culture_pts']; ?> /
+      <?php print $data['culture_psspts']; ?>
+    </TD>
+    <TD>
+      <?php print $data['culture_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Other Points (Bonus)
+    </TD>
+    <TD>
+      <?php print $data['studchrs_pts']; ?> +
+      <?php print $data['fafsa_rate_pts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 
 <?php endif; if ($school_status == 'Turnaround'): ?>
 
@@ -310,15 +309,15 @@ may earn a “Promising” designation by:</P>
 Your school is classified as a
 “Fresh Start School.” Fresh Start Schools are exempt from Status
 counting towards their score and therefore do not earn a cumulative
-grade, rather may earn a “Promising” designation by:</P>
+grade, rather may earn a “Promising” designation by:
 <OL>
   <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
   having earned at least 60% of
   the available points possible across the Progress and Climate
-  categories, including extra credit, OR</P>
+  categories, including extra credit, OR
   <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
   having received An “A” in
-  one of the 3 categories.</P>
+  one of the 3 categories.
 </OL>
 <TABLE>
   <COL style="width:16em">
@@ -326,118 +325,118 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL>
   <TR>
     <TD>
-      <P><B>Cumulative Grade</B></P>
+      Cumulative Grade
     </TD>
     <TD>
-      <P><B><?php print $data['turnaround_pts']; ?> /
-      <?php print $data['turnaround_psspts']; ?> = <?php print $data['turnaround_pct']; ?></B></P>
+      <?php print $data['turnaround_pts']; ?> /
+      <?php print $data['turnaround_psspts']; ?> = <?php print $data['turnaround_pct']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['turnaround_designation']; ?></B></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Status Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_ltrgrade']; ?></P>
+      <?php print $data['turnaround_designation']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Progress Grade</P>
+      Academic Status Grade
     </TD>
     <TD>
-      <P><?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?></P>
+      <?php print $data['status_pts']; ?> /
+      <?php print $data['status_psspts']; ?>
     </TD>
     <TD>
-      <P><?php print $data['progress_ltrgrade']; ?></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>School Climate Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_ltrgrade']; ?></P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Other Points (Bonus)</P>
+      Academic Progress Grade
     </TD>
     <TD>
-      <P><B><?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?></B></P>
+      <?php print $data['progress_pts']; ?> /
+      <?php print $data['progress_psspts']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['status_ltrgrade']; ?></B></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>ACT Composite Score (2
-      Year Average)</P>
-    </TD>
-    <TD>
-      <P><?php print $data['act2_comp']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['act2_comp_pts']; ?> /
-      <?php print $data['act2_comp_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><BR>
-      </P>
+      <?php print $data['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>ACT Percent College
-      Ready</P>
+      School Climate Grade
     </TD>
     <TD>
-      <P><?php print $data['act2_pcr']; ?></P>
+      <?php print $data['culture_pts']; ?> /
+      <?php print $data['culture_psspts']; ?>
     </TD>
     <TD>
-      <P><?php print $data['act2_pcr_pts']; ?> /
-      <?php print $data['act2_pcr_psspts']; ?></P>
-    </TD>
-    <TD>
-      <P><BR>
-      </P>
+      <?php print $data['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Graduation Rate
-      (2011-12)</P>
+      Other Points (Bonus)
     </TD>
     <TD>
-      <P><?php print $data['gradrate']; ?></P>
+      <?php print $data['status_pts']; ?> /
+      <?php print $data['status_psspts']; ?>
     </TD>
     <TD>
-      <P><?php print $data['gradrate_pts']; ?> /
-      <?php print $data['gradrate_psspts']; ?></P>
+      <?php print $data['status_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      ACT Composite Score (2
+      Year Average)
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <?php print $data['act2_comp']; ?>
+    </TD>
+    <TD>
+      <?php print $data['act2_comp_pts']; ?> /
+      <?php print $data['act2_comp_psspts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      ACT Percent College
+      Ready
+    </TD>
+    <TD>
+      <?php print $data['act2_pcr']; ?>
+    </TD>
+    <TD>
+      <?php print $data['act2_pcr_pts']; ?> /
+      <?php print $data['act2_pcr_psspts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Graduation Rate
+      (2011-12)
+    </TD>
+    <TD>
+      <?php print $data['gradrate']; ?>
+    </TD>
+    <TD>
+      <?php print $data['gradrate_pts']; ?> /
+      <?php print $data['gradrate_psspts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 
 <?php endif; ?>
 
@@ -448,41 +447,41 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL>
   <TR>
     <TD>
-      <P><B>Academic Progress</B></P>
+      Academic Progress
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
     <TD>
-      <P><B><?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?></B></P>
+      <?php print $data['progress_pts']; ?> /
+      <?php print $data['progress_psspts']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['progress_ltrgrade']; ?></B></P>
+      <?php print $data['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Year-over-Year ACT
+      Year-over-Year ACT
       Composite Score Gain (2 Year Average, 2010-11 to 2011-12, 2011-12
-      to 2012-13)</P>
+      to 2012-13)
     </TD>
     <TD>
-      <P><?php print $data['act_grwth']; ?></P>
+      <?php print $data['act_grwth']; ?>
     </TD>
     <TD>
-      <P><?php print $data['act_grwth_pts']; ?> /
-      <?php print $data['act_grwth_psspts']; ?></P>
+      <?php print $data['act_grwth_pts']; ?> /
+      <?php print $data['act_grwth_psspts']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 
 <TABLE WIDTH=623 CELLPADDING=7 CELLSPACING=0>
   <COL WIDTH=142>
@@ -491,68 +490,68 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL WIDTH=142>
   <TR VALIGN=TOP>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B>School Climate</B></FONT></FONT></P>
+      School Climate
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?></B></FONT></FONT></P>
+      <?php print $data['culture_pts']; ?> /
+      <?php print $data['culture_psspts']; ?>
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['culture_ltrgrade']; ?></B></FONT></FONT></P>
-    </TD>
-  </TR>
-  <TR VALIGN=TOP>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Site Visit Average Score</FONT></FONT></P>
-    </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['site_s']; ?></FONT></FONT></P>
-    </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['site_s_pts']; ?> /
-      <?php print $data['site_s_psspts']; ?></FONT></FONT></P>
-    </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><BR>
-      </P>
+      <?php print $data['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR VALIGN=TOP>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Net 5Essentials
-      (2012-13) Score</FONT></FONT></P>
+      Site Visit Average Score
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['net5e_1213']; ?></FONT></FONT></P>
+      <?php print $data['site_s']; ?>
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P STYLE="margin-bottom: 0.11in"><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['net5e_1213_pts']; ?>
-      /</FONT></FONT></P>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['net5e_1213_ptsps']; ?></FONT></FONT></P>
+      <?php print $data['site_s_pts']; ?> /
+      <?php print $data['site_s_psspts']; ?>
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
   </TR>
   <TR VALIGN=TOP>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>5Essentials Growth Score</FONT></FONT></P>
+      Net 5Essentials
+      (2012-13) Score
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['five_e_grwth']; ?></FONT></FONT></P>
+      <?php print $data['net5e_1213']; ?>
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['five_e_grwth_pts']; ?> /
-      <?php print $data['five_e_grwth_psspts']; ?></FONT></FONT></P>
+      <P STYLE="margin-bottom: 0.11in"><?php print $data['net5e_1213_pts']; ?>
+      /
+      <?php print $data['net5e_1213_ptsps']; ?>
     </TD>
     <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P><BR>
-      </P>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR VALIGN=TOP>
+    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+      5Essentials Growth Score
+    </TD>
+    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+      <?php print $data['five_e_grwth']; ?>
+    </TD>
+    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+      <?php print $data['five_e_grwth_pts']; ?> /
+      <?php print $data['five_e_grwth_psspts']; ?>
+    </TD>
+    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
@@ -563,62 +562,62 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL>
   <TR>
     <TD>
-      <P><B>Other Points</B></P>
+      Other Points
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
     <TD>
-      <P><B><?php print $data['studchrs_pts']; ?> +
-      <?php print $data['fafsa_rate_pts']; ?></B></P>
+      <?php print $data['studchrs_pts']; ?> +
+      <?php print $data['fafsa_rate_pts']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Challenge Factor
+      Challenge Factor
       (Socio-economic Status, Special Education, English Language
-      Learners)</P>
+      Learners)
     </TD>
     <TD>
-      <P>SES</P>
+      SES
     </TD>
     <TD>
-      <P>SpEd</P>
+      SpEd
     </TD>
     <TD>
-      <P>ELL</P>
+      ELL
     </TD>
     <TD>
-      <P>Total</P>
+      Total
     </TD>
     <TD>
-      <P><?php print $data['studchrs_pts']; ?></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P><?php print $data['econdis_pct']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['sped_pct']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['ell_pct']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['studchrs']; ?></P>
+      <?php print $data['studchrs_pts']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>FAFSA Completion Rate</P>
+      <?php print $data['econdis_pct']; ?>
     </TD>
     <TD>
-      <P><?php print $data['fafsa_rate']; ?></P>
+      <?php print $data['sped_pct']; ?>
     </TD>
     <TD>
-      <P><?php print $data['fafsa_rate_pts']; ?></P>
+      <?php print $data['ell_pct']; ?>
+    </TD>
+    <TD>
+      <?php print $data['studchrs']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      FAFSA Completion Rate
+    </TD>
+    <TD>
+      <?php print $data['fafsa_rate']; ?>
+    </TD>
+    <TD>
+      <?php print $data['fafsa_rate_pts']; ?>
     </TD>
   </TR>
 </TABLE>
@@ -630,231 +629,225 @@ grade, rather may earn a “Promising” designation by:</P>
 
 <?php if ($school_status == 'Mature'): ?>
 <P STYLE="margin-bottom: 0.11in">K-8
-Schools are graded using the following scale:</P>
+Schools are graded using the following scale:
 <TABLE>
   <COL>
   <COL>
   <TR>
     <TD>
-      <P>Grading Scale</P>
+      Grading Scale
     </TD>
     <TD>
-      <P><BR>
-      </P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P> A+</P>
-    </TD>
-    <TD>
-      <P>.90 to 1</P>
+      <BR>
+      
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>A</P>
+       A+
     </TD>
     <TD>
-      <P>.76 to &lt;
-      .90</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>B+</P>
-    </TD>
-    <TD>
-      <P>.70 to &lt;
-      .76</P>
+      .90 to 1
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>B</P>
+      A
     </TD>
     <TD>
-      <P>.60 to &lt;
-      .70</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>C+</P>
-    </TD>
-    <TD>
-      <P>.55 to &lt;
-      .60</P>
+      .76 to &lt;
+      .90
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>C</P>
+      B+
     </TD>
     <TD>
-      <P>.45 to &lt;
-      .55</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>D</P>
-    </TD>
-    <TD>
-      <P>&gt; .30 to &lt;
-      .45</P>
+      .70 to &lt;
+      .76
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>F</P>
+      B
     </TD>
     <TD>
-      <P>0 to .30</P>
+      .60 to &lt;
+      .70
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      C+
+    </TD>
+    <TD>
+      .55 to &lt;
+      .60
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      C
+    </TD>
+    <TD>
+      .45 to &lt;
+      .55
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      D
+    </TD>
+    <TD>
+      &gt; .30 to &lt;
+      .45
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      F
+    </TD>
+    <TD>
+      0 to .30
     </TD>
   </TR>
 </TABLE>
 <P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <TABLE>
   <COL>
   <COL>
   <TR>
     <TD>
-      <P><B>Total
-      Points (100  Points)</B></P>
+      Total
+      Points (100  Points)
     </TD>
     <TD>
-      <P ALIGN=RIGHT>&nbsp;</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>&nbsp;</P>
-    </TD>
-    <TD>
-      <P ALIGN=RIGHT><I>Points Possible</I></P>
+      &nbsp;
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Status</P>
+      &nbsp;
     </TD>
     <TD>
-      <P ALIGN=RIGHT>30</P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Progress</P>
-    </TD>
-    <TD>
-      <P ALIGN=RIGHT>40</P>
+      <I>Points Possible</I>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>School Culture</P>
+      Academic Status
     </TD>
     <TD>
-      <P ALIGN=RIGHT>30</P>
+      30
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Total</P>
+      Academic Progress
     </TD>
     <TD>
-      <P ALIGN=RIGHT>100</P>
+      40
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      School Culture
+    </TD>
+    <TD>
+      30
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Total
+    </TD>
+    <TD>
+      100
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <TABLE>
   <COL style="width:16em;">
   <COL>
   <COL>
   <TR>
     <TD>
-      <P><B>Cumulative Grade</B></P>
+      Cumulative Grade
     </TD>
     <TD>
-      <P><B><?php print $data['pts_earned']; ?> /
-      <?php print $data['pts_possible']; ?> = <?php print $data['mature_pct']; ?></B></P>
+      <?php print $data['pts_earned']; ?> /
+      <?php print $data['pts_possible']; ?> = <?php print $data['mature_pct']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['mature_ltrgrade']; ?></B></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Status Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_ltrgrade']; ?></P>
+      <?php print $data['mature_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Progress Grade</P>
+      Academic Status Grade
     </TD>
     <TD>
-      <P><?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?></P>
+      <?php print $data['pts_status']; ?> /
+      <?php print $data['ptspos_status']; ?>
     </TD>
     <TD>
-      <P><?php print $data['progress_ltrgrade']; ?></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>School Climate Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_ltrgrade']; ?></P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Other Points (Bonus)</P>
+      Academic Progress Grade
     </TD>
     <TD>
-      <P><?php print $data['studchrs_pts']; ?></P>
+      <?php print $data['pts_progress']; ?> /
+      <?php print $data['ptspos_progress']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <?php print $data['progress_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      School Climate Grade
+    </TD>
+    <TD>
+      <?php print $data['pts_culture']; ?> /
+      <?php print $data['ptspos_culture']; ?>
+    </TD>
+    <TD>
+      <?php print $data['culture_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Other Points (Bonus)
+    </TD>
+    <TD>
+      <?php print $data['studchrs_pts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
 
 <?php endif; if ($school_status == 'New'): ?>
 
-<P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%"><A NAME="<?php print $data['_GoBack']; ?>"></A>
-Your school is classified as a
+<p>Your school is classified as a
 “New School.” New Schools do not earn a cumulative grade, rather
-may earn a “Promising” designation by:</P>
+may earn a “Promising” designation by:</p>
 <OL>
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  <li>
   having participated in at
   least 60 of the possible 100 points, and earned 60% of the available
-  points, <B>OR</B></P>
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  points, OR
+  <li>
   having received an “A” in
-  one of the 3 categories.</P>
+  one of the 3 categories.</li>
 </OL>
 <TABLE>
   <COL style="width:16em">
@@ -862,83 +855,81 @@ may earn a “Promising” designation by:</P>
   <COL>
   <TR>
     <TD>
-      <P><B>Cumulative Grade</B></P>
+      Cumulative Grade
     </TD>
     <TD>
-      <P><B><?php print $data['pts_earned']; ?> /
-      <?php print $data['pts_possible']; ?> = <?php print $data['newschool_pct']; ?></B></P>
+      <?php print $data['pts_earned']; ?> /
+      <?php print $data['pts_possible']; ?> = <?php print $data['newschool_pct']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['newschool_designation']; ?></B></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Status Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_ltrgrade']; ?></P>
+      <?php print $data['newschool_designation']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Progress Grade</P>
+      Academic Status Grade
     </TD>
     <TD>
-      <P><?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?></P>
+      <?php print $data['pts_status']; ?> /
+      <?php print $data['ptspos_status']; ?>
     </TD>
     <TD>
-      <P><?php print $data['progress_ltrgrade']; ?></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>School Climate Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_ltrgrade']; ?></P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Other Points (Bonus)</P>
+      Academic Progress Grade
     </TD>
     <TD>
-      <P><?php print $data['studchrs_pts']; ?></P>
+      <?php print $data['pts_progress']; ?> /
+      <?php print $data['ptspos_progress']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <?php print $data['progress_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      School Climate Grade
+    </TD>
+    <TD>
+      <?php print $data['pts_culture']; ?> /
+      <?php print $data['ptspos_culture']; ?>
+    </TD>
+    <TD>
+      <?php print $data['culture_ltrgrade']; ?>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Other Points (Bonus)
+    </TD>
+    <TD>
+      <?php print $data['studchrs_pts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
 
 <?php endif; if ($school_status == 'Turnaround'): ?>
 
-<P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+<p>
 Your school is classified as a
 “Fresh Start School.” Fresh Start Schools are exempt from Status
 counting towards their score and therefore do not earn a cumulative
-grade, rather may earn a “Promising” designation by:</P>
+grade, rather may earn a “Promising” designation by:</p>
 <OL>
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  <li>
   having earned at least 60% of
   the available points possible across the Progress and Climate
-  categories, including extra credit, OR</P>
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  categories, including extra credit, OR</li>
+  <li>
   having received An “A” in
-  one of the 3 categories.</P>
+  one of the 3 categories.</li>
 </OL>
 <TABLE>
   <COL style="width:16em">
@@ -946,123 +937,121 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL>
   <TR>
     <TD>
-      <P><B>Cumulative Grade</B></P>
+      Cumulative Grade
     </TD>
     <TD>
-      <P><B><?php print $data['turnaround_pts_earned']; ?>
-      / <?php print $data['turnaround_pts_possible']; ?> = <?php print $data['turnaround_pct']; ?></B></P>
+      <?php print $data['turnaround_pts_earned']; ?>
+      / <?php print $data['turnaround_pts_possible']; ?> = <?php print $data['turnaround_pct']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['turnaround_designation']; ?></B></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>Academic Status Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['status_ltrgrade']; ?></P>
+      <?php print $data['turnaround_designation']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Academic Progress Grade</P>
+      Academic Status Grade
     </TD>
     <TD>
-      <P><?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?></P>
+      <?php print $data['pts_status']; ?> /
+      <?php print $data['ptspos_status']; ?>
     </TD>
     <TD>
-      <P><?php print $data['progress_ltrgrade']; ?></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P>School Climate Grade</P>
-    </TD>
-    <TD>
-      <P><?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?></P>
-    </TD>
-    <TD>
-      <P><?php print $data['culture_ltrgrade']; ?></P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Other Points (Bonus)</P>
+      Academic Progress Grade
     </TD>
     <TD>
-      <P>D STYLE="border: none; padding: 0in">
-      <P><BR>
-      </P>
+      <?php print $data['pts_progress']; ?> /
+      <?php print $data['ptspos_progress']; ?>
     </TD>
     <TD>
-      <P><B><?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?></B></P>
-    </TD>
-    <TD>
-      <P><B><?php print $data['status_ltrgrade']; ?></B></P>
+      <?php print $data['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Math Proficiency Rate
-      (2-Year Average)</P>
+      School Climate Grade
     </TD>
     <TD>
-      <P><?php print $data['pr2_math']; ?></P>
+      <?php print $data['pts_culture']; ?> /
+      <?php print $data['ptspos_culture']; ?>
     </TD>
     <TD>
-      <P><?php print $data['pr2_math_pts']; ?> /
-      <?php print $data['pr2_math_ptsps']; ?></P>
-    </TD>
-    <TD>
-      <P><BR>
-      </P>
+      <?php print $data['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>ELA (Reading + Writing)
-      Proficiency Rate (2-Year Average)</P>
+      Other Points (Bonus)
     </TD>
     <TD>
-      <P><?php print $data['pr2_ela']; ?></P>
+      D STYLE="border: none; padding: 0in">
+      <BR>
+      
     </TD>
     <TD>
-      <P><?php print $data['pr2_ela_pts']; ?> /
-      <?php print $data['pr2_ela_ptsps']; ?></P>
+      <?php print $data['pts_status']; ?> /
+      <?php print $data['ptspos_status']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P>Other (Science &amp;
-      Social Studies) Proficiency Rate (2-Year Average)</P>
+      Math Proficiency Rate
+      (2-Year Average)
     </TD>
     <TD>
-      <P><?php print $data['pr2_other']; ?></P>
+      <?php print $data['pr2_math']; ?>
     </TD>
     <TD>
-      <P><?php print $data['pr2_other_pts']; ?> /
-      <?php print $data['pr2_other_ptsps']; ?></P>
+      <?php print $data['pr2_math_pts']; ?> /
+      <?php print $data['pr2_math_ptsps']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      ELA (Reading + Writing)
+      Proficiency Rate (2-Year Average)
+    </TD>
+    <TD>
+      <?php print $data['pr2_ela']; ?>
+    </TD>
+    <TD>
+      <?php print $data['pr2_ela_pts']; ?> /
+      <?php print $data['pr2_ela_ptsps']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Other (Science &amp;
+      Social Studies) Proficiency Rate (2-Year Average)
+    </TD>
+    <TD>
+      <?php print $data['pr2_other']; ?>
+    </TD>
+    <TD>
+      <?php print $data['pr2_other_pts']; ?> /
+      <?php print $data['pr2_other_ptsps']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
 
 <?php endif; ?>
 
@@ -1073,74 +1062,73 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL WIDTH=139>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B>Academic Status</B></FONT></FONT></P>
+      Academic Status
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?></B></FONT></FONT></P>
+      <?php print $data['pts_status']; ?> /
+      <?php print $data['ptspos_status']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['status_ltrgrade']; ?></B></FONT></FONT></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Math Proficiency Rate
-      (2-Year Average)</FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['pr2_math']; ?></FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['pr2_math_pts']; ?> /
-      <?php print $data['pr2_math_ptsps']; ?></FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><BR>
-      </P>
+      <?php print $data['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>ELA (Reading + Writing)
-      Proficiency Rate (2-Year Average)</FONT></FONT></P>
+      Math Proficiency Rate
+      (2-Year Average)
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['pr2_ela']; ?></FONT></FONT></P>
+      <?php print $data['pr2_math']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['pr2_ela_pts']; ?> /
-      <?php print $data['pr2_ela_ptsps']; ?></FONT></FONT></P>
+      <?php print $data['pr2_math_pts']; ?> /
+      <?php print $data['pr2_math_ptsps']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
   </TR>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Other (Science &amp;
-      Social Studies) Proficiency Rate (2-Year Average)</FONT></FONT></P>
+      ELA (Reading + Writing)
+      Proficiency Rate (2-Year Average)
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['pr2_other']; ?></FONT></FONT></P>
+      <?php print $data['pr2_ela']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['pr2_other_pts']; ?> /
-      <?php print $data['pr2_other_ptsps']; ?></FONT></FONT></P>
+      <?php print $data['pr2_ela_pts']; ?> /
+      <?php print $data['pr2_ela_ptsps']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      Other (Science &amp;
+      Social Studies) Proficiency Rate (2-Year Average)
+    </TD>
+    <TD>
+      <?php print $data['pr2_other']; ?>
+    </TD>
+    <TD>
+      <?php print $data['pr2_other_pts']; ?> /
+      <?php print $data['pr2_other_ptsps']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <TABLE WIDTH=623>
   <COL WIDTH=142>
   <COL WIDTH=142>
@@ -1148,57 +1136,56 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL WIDTH=142>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B>Academic Progress</B></FONT></FONT></P>
+      Academic Progress
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?></B></FONT></FONT></P>
+      <?php print $data['pts_progress']; ?> /
+      <?php print $data['ptspos_progress']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['progress_ltrgrade']; ?></B></FONT></FONT></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Performance Level Change
-      Score</FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['plc_comp']; ?></FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['plc_comp_pts']; ?> /
-      <?php print $data['plc_comp_ptsps']; ?></FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><BR>
-      </P>
+      <?php print $data['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>NWEA/Scantron Percent
-      Meeting Growth Target</FONT></FONT></P>
+      Performance Level Change
+      Score
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['bench_comp']; ?></FONT></FONT></P>
+      <?php print $data['plc_comp']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['bench_comp_pts']; ?> /
-      <?php print $data['bench_comp_ptsps']; ?></FONT></FONT></P>
+      <?php print $data['plc_comp_pts']; ?> /
+      <?php print $data['plc_comp_ptsps']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      NWEA/Scantron Percent
+      Meeting Growth Target
+    </TD>
+    <TD>
+      <?php print $data['bench_comp']; ?>
+    </TD>
+    <TD>
+      <?php print $data['bench_comp_pts']; ?> /
+      <?php print $data['bench_comp_ptsps']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <TABLE WIDTH=623>
   <COL WIDTH=142>
   <COL WIDTH=142>
@@ -1206,73 +1193,72 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL WIDTH=142>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B>School Climate</B></FONT></FONT></P>
+      School Climate
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?></B></FONT></FONT></P>
+      <?php print $data['pts_culture']; ?> /
+      <?php print $data['ptspos_culture']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['culture_ltrgrade']; ?></B></FONT></FONT></P>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Site Visit Average Score</FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['site_s']; ?></FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['site_s_pts']; ?> /
-      <?php print $data['site_s_psspts']; ?></FONT></FONT></P>
-    </TD>
-    <TD>
-      <P><BR>
-      </P>
+      <?php print $data['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Net 5Essentials
-      (2012-13) Score</FONT></FONT></P>
+      Site Visit Average Score
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['net5e_1213']; ?></FONT></FONT></P>
+      <?php print $data['site_s']; ?>
     </TD>
     <TD>
-      <P STYLE="margin-bottom: 0.11in"><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['net5e_1213_pts']; ?>
-      /</FONT></FONT></P>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['net5e_1213_ptsps']; ?></FONT></FONT></P>
+      <?php print $data['site_s_pts']; ?> /
+      <?php print $data['site_s_psspts']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
   </TR>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>5Essentials Growth Score</FONT></FONT></P>
+      Net 5Essentials
+      (2012-13) Score
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['five_e_grwth']; ?></FONT></FONT></P>
+      <?php print $data['net5e_1213']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['five_e_grwth_pts']; ?> /
-      <?php print $data['five_e_grwth_psspts']; ?></FONT></FONT></P>
+      <?php print $data['net5e_1213_pts']; ?>
+      /
+      <?php print $data['net5e_1213_ptsps']; ?>
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      5Essentials Growth Score
+    </TD>
+    <TD>
+      <?php print $data['five_e_grwth']; ?>
+    </TD>
+    <TD>
+      <?php print $data['five_e_grwth_pts']; ?> /
+      <?php print $data['five_e_grwth_psspts']; ?>
+    </TD>
+    <TD>
+      <BR>
+      
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-</P>
+
 <TABLE WIDTH=623>
   <COL WIDTH=160>
   <COL WIDTH=72>
@@ -1282,50 +1268,50 @@ grade, rather may earn a “Promising” designation by:</P>
   <COL WIDTH=160>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B>Other Points</B></FONT></FONT></P>
+      Other Points
     </TD>
     <TD>
-      <P><BR>
-      </P>
+      <BR>
+      
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><B><?php print $data['studchrs_pts']; ?></B></FONT></FONT></P>
+      <?php print $data['studchrs_pts']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Challenge Factor
+      Challenge Factor
       (Socio-economic Status, Special Education, English Language
-      Learners)</FONT></FONT></P>
+      Learners)
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>SES</FONT></FONT></P>
+      SES
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>SpEd</FONT></FONT></P>
+      SpEd
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>ELL</FONT></FONT></P>
+      ELL
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2>Total</FONT></FONT></P>
+      Total
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['studchrs_pts']; ?></FONT></FONT></P>
+      <?php print $data['studchrs_pts']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['econdis_pct']; ?></FONT></FONT></P>
+      <?php print $data['econdis_pct']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['sped_pct']; ?></FONT></FONT></P>
+      <?php print $data['sped_pct']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['ell_pct']; ?></FONT></FONT></P>
+      <?php print $data['ell_pct']; ?>
     </TD>
     <TD>
-      <P><FONT FACE="Arial, serif"><FONT SIZE=2><?php print $data['studchrs']; ?></FONT></FONT></P>
+      <?php print $data['studchrs']; ?>
     </TD>
   </TR>
 </TABLE>

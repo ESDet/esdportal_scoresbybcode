@@ -124,9 +124,6 @@ function esdportal_scoresbybcode_page($bcode) {
   $hs_data = db_query("SELECT * FROM {esd_hs_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc();
   $k8_data = db_query("SELECT * FROM {esd_k8_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc();
 
-dsm($school_status->name);
-dsm($hs_data);dsm($k8_data);
-
   $message = array(
     'alert' => array(
       '#type' => 'markup',
