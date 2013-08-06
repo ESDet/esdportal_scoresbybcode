@@ -428,6 +428,10 @@ grade, rather may earn a “Promising” designation by:</p>
   </TR>
 </TABLE>
 
+<?php endif; if ($school_status == 'Specialty'): ?>
+
+<p>Your school is designated a "Specialty" school. A specialty school serves students that have unique learning needs or skills. Examples can include: adult education and alternative learning programs. Due to the unique settings of these schools, we are unable to produce a grade.</p>
+
 <?php endif; ?>
 
 <TABLE>
@@ -1021,6 +1025,10 @@ grade, rather may earn a “Promising” designation by:</p>
     </TD>
   </TR>
 </TABLE>
+
+<?php endif; if ($school_status == 'Specialty'): ?>
+
+<p>Your school is designated a "Specialty" school. A specialty school serves students that have unique learning needs or skills. Examples can include: adult education and alternative learning programs. Due to the unique settings of these schools, we are unable to produce a grade.</p>
 
 <?php endif; ?>
 
