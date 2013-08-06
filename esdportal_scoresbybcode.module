@@ -124,6 +124,9 @@ function esdportal_scoresbybcode_page($bcode) {
   $hs_data = db_query("SELECT * FROM {esd_hs_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc();
   $k8_data = db_query("SELECT * FROM {esd_k8_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc();
 
+dsm($school_status->name);
+dsm($hs_data);dsm($k8_data);
+
   $message = array(
     'alert' => array(
       '#type' => 'markup',
@@ -143,7 +146,7 @@ function esdportal_scoresbybcode_page($bcode) {
  */
 function esdportal_scoresbybcode_form() {
   $form['intro'] = array(
-    '#markup' => 'Description/help text. Please note that...',
+    '#markup' => 'Please use this feedback form if you have any concerns. For immediate assistance, please call 313-285-9156.',
   );
   $form['name'] = array(
     '#type' => 'textfield',
