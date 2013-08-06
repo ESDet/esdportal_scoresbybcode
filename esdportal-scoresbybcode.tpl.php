@@ -91,7 +91,6 @@
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
 
 <TABLE>
   <COL>
@@ -146,9 +145,6 @@
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
 
 <TABLE>
   <COL style="width:16em">
@@ -216,23 +212,22 @@
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
 
 
 <?php endif; if ($school_status == 'New'): ?>
 
-<P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+<p>
 Your school is classified as a
 “New School.” New Schools do not earn a cumulative grade, rather
-may earn a “Promising” designation by:
+may earn a “Promising” designation by:</p>
 <OL>
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  <LI>
   having participated in at
   least 60 of the possible 100 points, and earned 60% of the available
-  points, OR
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  points, OR</LI>
+  <LI>
   having received an “A” in
-  one of the 3 categories.
+  one of the 3 categories.</LI>
 </OL>
 <TABLE>
   <COL style="width:16em">
@@ -300,24 +295,21 @@ may earn a “Promising” designation by:
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-
 
 <?php endif; if ($school_status == 'Turnaround'): ?>
 
-<P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%"><A NAME="<?php print $data['_GoBack']; ?>"></A>
-Your school is classified as a
+<p>Your school is classified as a
 “Fresh Start School.” Fresh Start Schools are exempt from Status
 counting towards their score and therefore do not earn a cumulative
-grade, rather may earn a “Promising” designation by:
+grade, rather may earn a “Promising” designation by:</p>
 <OL>
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  <LI>
   having earned at least 60% of
   the available points possible across the Progress and Climate
-  categories, including extra credit, OR
-  <LI><P STYLE="margin-top: 0.02in; margin-bottom: 0.02in; background: #ffffff; line-height: 100%">
+  categories, including extra credit, OR</LI>
+  <LI>
   having received An “A” in
-  one of the 3 categories.
+  one of the 3 categories.</LI>
 </OL>
 <TABLE>
   <COL style="width:16em">
@@ -435,8 +427,6 @@ grade, rather may earn a “Promising” designation by:
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
-
 
 <?php endif; ?>
 
@@ -480,76 +470,74 @@ grade, rather may earn a “Promising” designation by:
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
 
-
-<TABLE WIDTH=623 CELLPADDING=7 CELLSPACING=0>
+<TABLE>
   <COL WIDTH=142>
   <COL WIDTH=142>
   <COL WIDTH=142>
   <COL WIDTH=142>
-  <TR VALIGN=TOP>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+  <TR>
+    <TD>
       School Climate
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <BR>
       
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <?php print $data['culture_pts']; ?> /
       <?php print $data['culture_psspts']; ?>
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <?php print $data['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR VALIGN=TOP>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       Site Visit Average Score
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <?php print $data['site_s']; ?>
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <?php print $data['site_s_pts']; ?> /
       <?php print $data['site_s_psspts']; ?>
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <BR>
       
     </TD>
   </TR>
-  <TR VALIGN=TOP>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+  <TR>
+    <TD>
       Net 5Essentials
       (2012-13) Score
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <?php print $data['net5e_1213']; ?>
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
-      <P STYLE="margin-bottom: 0.11in"><?php print $data['net5e_1213_pts']; ?>
+    <TD>
+      <?php print $data['net5e_1213_pts']; ?>
       /
       <?php print $data['net5e_1213_psspts']; ?>
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <BR>
       
     </TD>
   </TR>
-  <TR VALIGN=TOP>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+  <TR>
+    <TD>
       5Essentials Growth Score
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <?php print $data['five_e_grwth']; ?>
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <?php print $data['five_e_grwth_pts']; ?> /
       <?php print $data['five_e_grwth_psspts']; ?>
     </TD>
-    <TD WIDTH=142 STYLE="border: none; padding: 0in">
+    <TD>
       <BR>
       
     </TD>
@@ -628,8 +616,7 @@ grade, rather may earn a “Promising” designation by:
 <?php $data = $k8_data; ?>
 
 <?php if ($school_status == 'Mature'): ?>
-<P STYLE="margin-bottom: 0.11in">K-8
-Schools are graded using the following scale:
+<p>K-8 Schools are graded using the following scale:</p>
 <TABLE>
   <COL>
   <COL>
@@ -713,7 +700,6 @@ Schools are graded using the following scale:
     </TD>
   </TR>
 </TABLE>
-<P STYLE="margin-bottom: 0.11in"><BR><BR>
 
 <TABLE>
   <COL>
