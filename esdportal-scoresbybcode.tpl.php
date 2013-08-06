@@ -8,7 +8,7 @@
 
 <?php if ($school_status == 'Mature'): ?>
 <p>High Schools are graded using the following scale:</p>
-<TABLE>
+<TABLE class="grading-scale">
   <COL>
   <COL>
   <TR>
@@ -92,7 +92,7 @@
   </TR>
 </TABLE>
 
-<TABLE>
+<TABLE class="grading-scale">
   <COL>
   <COL>
   <TR>
@@ -617,7 +617,7 @@ grade, rather may earn a “Promising” designation by:</p>
 
 <?php if ($school_status == 'Mature'): ?>
 <p>K-8 Schools are graded using the following scale:</p>
-<TABLE>
+<TABLE class="grading-scale">
   <COL>
   <COL>
   <TR>
@@ -701,7 +701,7 @@ grade, rather may earn a “Promising” designation by:</p>
   </TR>
 </TABLE>
 
-<TABLE>
+<TABLE class="grading-scale">
   <COL>
   <COL>
   <TR>
@@ -974,10 +974,6 @@ grade, rather may earn a “Promising” designation by:</p>
       Other Points (Bonus)
     </TD>
     <TD>
-      <BR>
-      
-    </TD>
-    <TD>
       <?php print $data['pts_status']; ?> /
       <?php print $data['ptspos_status']; ?>
     </TD>
@@ -997,10 +993,6 @@ grade, rather may earn a “Promising” designation by:</p>
       <?php print $data['pr2_math_pts']; ?> /
       <?php print $data['pr2_math_ptsps']; ?>
     </TD>
-    <TD>
-      <BR>
-      
-    </TD>
   </TR>
   <TR>
     <TD>
@@ -1014,10 +1006,6 @@ grade, rather may earn a “Promising” designation by:</p>
       <?php print $data['pr2_ela_pts']; ?> /
       <?php print $data['pr2_ela_ptsps']; ?>
     </TD>
-    <TD>
-      <BR>
-      
-    </TD>
   </TR>
   <TR>
     <TD>
@@ -1030,10 +1018,6 @@ grade, rather may earn a “Promising” designation by:</p>
     <TD>
       <?php print $data['pr2_other_pts']; ?> /
       <?php print $data['pr2_other_ptsps']; ?>
-    </TD>
-    <TD>
-      <BR>
-      
     </TD>
   </TR>
 </TABLE>
