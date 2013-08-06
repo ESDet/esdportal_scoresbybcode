@@ -26,6 +26,7 @@ function esdportal_scoresbybcode_permission() {
  */
 function esdportal_scoresbybcode_menu() {
   $items['schoolscores/%'] = array(
+    'title' => 'School scores',
     'page callback' => 'esdportal_scoresbybcode_page',
     'page arguments' => array(1),
     'access arguments' => array('access school scores'),
@@ -49,6 +50,18 @@ function esdportal_scoresbybcode_menu() {
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function esdportal_scoresbybcode_theme() {
+  return array(
+    'esdportal_scoresbybcode' => array(
+      'variables' => array(),
+      'template' => 'esdportal-scoresbybcode',
+    ),
+  );
 }
 
 /**
@@ -100,36 +113,16 @@ function esdportal_scoresbybcode_page($bcode) {
     return t('Please provide a numeric bcode.');
   }
 
-  // Get school name
-  $schoolname = db_query("SELECT ttd.name FROM {field_data_field_bcode} AS fdfb INNER JOIN {taxonomy_term_data} AS ttd ON fdfb.entity_id=ttd.tid WHERE fdfb.field_bcode_value=:bcode AND fdfb.entity_type='taxonomy_term'", array(':bcode' => $bcode))->fetchField();
-  if (strlen($schoolname) < 2) {
+  // Load school term by bcode
+  $school_tid = db_query("SELECT ttd.tid FROM {field_data_field_bcode} AS fdfb INNER JOIN {taxonomy_term_data} AS ttd ON fdfb.entity_id=ttd.tid WHERE fdfb.field_bcode_value=:bcode AND fdfb.entity_type='taxonomy_term'", array(':bcode' => $bcode))->fetchField();
+  $school = taxonomy_term_load($school_tid);
+  if (!$school) {
     return t('Please provide a bcode for an ESD school.');
   }
+  $school_status = taxonomy_term_load($school->field_school_scorecard_status['und'][0]['tid']);
 
-  // Build groups of fields
-  $fieldgroups = array(
-    'Academic Status' => array(
-      'description' => 'This would appear below the title, maybe',
-      'fields' => array(
-        'CSV High Expectations' => array(
-          'description' => 'Something descriptive',
-          'table' => 'esd_k8_2013',
-          'column' => 'CSV_HEL_RAW',
-          'value' => NULL, // set to non-null if db has value
-          'denominator' => 1,
-          'bcode_col' => 'buildingcode',
-        ),
-        '4 Year Graduation Rate' => array(
-          'description' => 'Percentage of students who complete school in four years',
-          'table' => 'esd_hs_2013',
-          'column' => 'GRADRATE_RAW',
-          'value' => NULL,
-          'denominator' => 100,
-          'bcode_col' => 'buildingcode',
-        ),
-      ),
-    ),
-  );
+  $hs_data = db_query("SELECT * FROM {esd_hs_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc();
+  $k8_data = db_query("SELECT * FROM {esd_k8_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc();
 
   $message = array(
     'alert' => array(
@@ -139,34 +132,9 @@ function esdportal_scoresbybcode_page($bcode) {
   );
   $message = drupal_render($message);
 
-  $tables = '';
-  // Build tables
-  foreach ($fieldgroups as $groupname => &$data) {
-    $header = array($groupname, t('Description'), t('Points possible'), t('Grade'));
-    foreach ($data['fields'] as $field_name => $field_data) {
-      $query = db_query("SELECT " . $field_data['column'] . " FROM {" . $field_data['table'] . "} WHERE " . $field_data['bcode_col'] . " = :bcode", array(':bcode' => $bcode));
-      $value = $query->fetchField();
-      $rows[] = array(
-        $field_name,
-        $field_data['description'],
-        $field_data['denominator'],
-        $value,
-      );
-    }
-    $tables .= theme('table', array('header' => $header, 'rows' => $rows));
-  }
-
   $form = drupal_render(drupal_get_form('esdportal_scoresbybcode_form'));
 
-  $content = $message . $tables . $form;
-
-  $render_array['esdportal_scoresbybcode_page'] = array(
-    '#type' => 'markup',
-    '#markup' => $content,
-    '#title' => t('Grade Report for @bcode', array('@bcode' => $bcode)),
-  );
-
-  return $render_array;
+  return theme('esdportal_scoresbybcode', array('message' => $message, 'school' => $school, 'school_status' => $school_status->name, 'school_status_lc' => strtolower($school_status->name), 'hs_data' => $hs_data, 'k8_data' => $k8_data, 'form' => $form));
 }
 
 /**
