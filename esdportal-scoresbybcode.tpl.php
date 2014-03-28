@@ -705,60 +705,6 @@ grade, rather may earn a “Promising” designation by:</p>
   </TR>
 </TABLE>
 
-<TABLE class="grading-scale">
-  <COL>
-  <COL>
-  <TR>
-    <TD>
-      Total
-      Points (100  Points)
-    </TD>
-    <TD>
-      &nbsp;
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      &nbsp;
-    </TD>
-    <TD>
-      <I>Points Possible</I>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      Academic Status
-    </TD>
-    <TD>
-      30
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      Academic Progress
-    </TD>
-    <TD>
-      40
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      School Culture
-    </TD>
-    <TD>
-      30
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      Total
-    </TD>
-    <TD>
-      100
-    </TD>
-  </TR>
-</TABLE>
-
 <TABLE>
   <COL style="width:16em;">
   <COL>
@@ -768,11 +714,10 @@ grade, rather may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['pts_earned']; ?> /
-      <?php print $data['pts_possible']; ?> = <?php print $data['mature_pct']; ?>
+      <?php print $data['total_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['mature_ltrgrade']; ?>
+      <?php print $data['total_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -848,11 +793,10 @@ may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['pts_earned']; ?> /
-      <?php print $data['pts_possible']; ?> = <?php print $data['newschool_pct']; ?>
+      <?php print $data['total_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['newschool_designation']; ?>
+      <?php print $data['total_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -930,11 +874,10 @@ grade, rather may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['turnaround_pts_earned']; ?>
-      / <?php print $data['turnaround_pts_possible']; ?> = <?php print $data['turnaround_pct']; ?>
+      <?php print $data['total_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['turnaround_designation']; ?>
+      <?php print $data['total_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
