@@ -3,8 +3,8 @@
 <?php print $message; ?>
 <?php endif; ?>
 
-<?php if ($hs_data): ?>
-<?php $data = $hs_data; ?>
+</pre>
+<?php if (count($data['esd_hs_2013']) > 1): ?>
 
 <?php if ($school_status == 'Mature'): ?>
 <p>High Schools are graded using the following scale:</p>
@@ -155,11 +155,11 @@
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['total_pts']; ?> /
-      <?php print $data['total_psspts']; ?> = <?php print $data['mature_pct']; ?>
+      <?php print $data['esd_hs_2013']['total_pts']; ?> /
+      <?php print $data['esd_hs_2013']['total_psspts']; ?> = <?php print $data['esd_hs_2013']['mature_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['mature_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['mature_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -167,11 +167,11 @@
       Academic Status Grade
     </TD>
     <TD>
-      <?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?>
+      <?php print $data['esd_hs_2013']['status_pts']; ?> /
+      <?php print $data['esd_hs_2013']['status_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -179,11 +179,11 @@
       Academic Progress Grade
     </TD>
     <TD>
-      <?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?>
+      <?php print $data['esd_hs_2013']['progress_pts']; ?> /
+      <?php print $data['esd_hs_2013']['progress_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -191,11 +191,11 @@
       School Climate Grade
     </TD>
     <TD>
-      <?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?>
+      <?php print $data['esd_hs_2013']['culture_pts']; ?> /
+      <?php print $data['esd_hs_2013']['culture_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -203,8 +203,8 @@
       Other Points (Bonus)
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?> +
-      <?php print $data['fafsa_rate_pts']; ?>
+      <?php print $data['esd_hs_2013']['studchrs_pts']; ?> +
+      <?php print $data['esd_hs_2013']['fafsa_rate_pts']; ?>
     </TD>
     <TD>
       <BR>
@@ -238,11 +238,11 @@ may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['total_pts']; ?> /
-      <?php print $data['total_psspts']; ?> = <?php print $data['newschool_pct']; ?>
+      <?php print $data['esd_hs_2013']['total_pts']; ?> /
+      <?php print $data['esd_hs_2013']['total_psspts']; ?> = <?php print $data['esd_hs_2013']['newschool_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['newschool_designation']; ?>
+      <?php print $data['esd_hs_2013']['newschool_designation']; ?>
     </TD>
   </TR>
   <TR>
@@ -250,11 +250,11 @@ may earn a “Promising” designation by:</p>
       Academic Status Grade
     </TD>
     <TD>
-      <?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?>
+      <?php print $data['esd_hs_2013']['status_pts']; ?> /
+      <?php print $data['esd_hs_2013']['status_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -262,11 +262,11 @@ may earn a “Promising” designation by:</p>
       Academic Progress Grade
     </TD>
     <TD>
-      <?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?>
+      <?php print $data['esd_hs_2013']['progress_pts']; ?> /
+      <?php print $data['esd_hs_2013']['progress_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -274,11 +274,11 @@ may earn a “Promising” designation by:</p>
       School Climate Grade
     </TD>
     <TD>
-      <?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?>
+      <?php print $data['esd_hs_2013']['culture_pts']; ?> /
+      <?php print $data['esd_hs_2013']['culture_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -286,8 +286,8 @@ may earn a “Promising” designation by:</p>
       Other Points (Bonus)
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?> +
-      <?php print $data['fafsa_rate_pts']; ?>
+      <?php print $data['esd_hs_2013']['studchrs_pts']; ?> +
+      <?php print $data['esd_hs_2013']['fafsa_rate_pts']; ?>
     </TD>
     <TD>
       <BR>
@@ -320,11 +320,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['turnaround_pts']; ?> /
-      <?php print $data['turnaround_psspts']; ?> = <?php print $data['turnaround_pct']; ?>
+      <?php print $data['esd_hs_2013']['turnaround_pts']; ?> /
+      <?php print $data['esd_hs_2013']['turnaround_psspts']; ?> = <?php print $data['esd_hs_2013']['turnaround_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['turnaround_designation']; ?>
+      <?php print $data['esd_hs_2013']['turnaround_designation']; ?>
     </TD>
   </TR>
   <TR>
@@ -332,11 +332,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Academic Status Grade
     </TD>
     <TD>
-      <?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?>
+      <?php print $data['esd_hs_2013']['status_pts']; ?> /
+      <?php print $data['esd_hs_2013']['status_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -344,11 +344,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Academic Progress Grade
     </TD>
     <TD>
-      <?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?>
+      <?php print $data['esd_hs_2013']['progress_pts']; ?> /
+      <?php print $data['esd_hs_2013']['progress_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -356,11 +356,11 @@ grade, rather may earn a “Promising” designation by:</p>
       School Climate Grade
     </TD>
     <TD>
-      <?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?>
+      <?php print $data['esd_hs_2013']['culture_pts']; ?> /
+      <?php print $data['esd_hs_2013']['culture_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -368,11 +368,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Other Points (Bonus)
     </TD>
     <TD>
-      <?php print $data['status_pts']; ?> /
-      <?php print $data['status_psspts']; ?>
+      <?php print $data['esd_hs_2013']['status_pts']; ?> /
+      <?php print $data['esd_hs_2013']['status_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -381,11 +381,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Year Average)
     </TD>
     <TD>
-      <?php print $data['act2_comp']; ?>
+      <?php print $data['esd_hs_2013']['act2_comp']; ?>
     </TD>
     <TD>
-      <?php print $data['act2_comp_pts']; ?> /
-      <?php print $data['act2_comp_psspts']; ?>
+      <?php print $data['esd_hs_2013']['act2_comp_pts']; ?> /
+      <?php print $data['esd_hs_2013']['act2_comp_psspts']; ?>
     </TD>
     <TD>
       <BR>
@@ -398,11 +398,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Ready
     </TD>
     <TD>
-      <?php print $data['act2_pcr']; ?>
+      <?php print $data['esd_hs_2013']['act2_pcr']; ?>
     </TD>
     <TD>
-      <?php print $data['act2_pcr_pts']; ?> /
-      <?php print $data['act2_pcr_psspts']; ?>
+      <?php print $data['esd_hs_2013']['act2_pcr_pts']; ?> /
+      <?php print $data['esd_hs_2013']['act2_pcr_psspts']; ?>
     </TD>
     <TD>
       <BR>
@@ -415,11 +415,11 @@ grade, rather may earn a “Promising” designation by:</p>
       (2011-12)
     </TD>
     <TD>
-      <?php print $data['gradrate']; ?>
+      <?php print $data['esd_hs_2013']['gradrate']; ?>
     </TD>
     <TD>
-      <?php print $data['gradrate_pts']; ?> /
-      <?php print $data['gradrate_psspts']; ?>
+      <?php print $data['esd_hs_2013']['gradrate_pts']; ?> /
+      <?php print $data['esd_hs_2013']['gradrate_psspts']; ?>
     </TD>
     <TD>
       <BR>
@@ -448,11 +448,11 @@ grade, rather may earn a “Promising” designation by:</p>
       
     </TD>
     <TD>
-      <?php print $data['progress_pts']; ?> /
-      <?php print $data['progress_psspts']; ?>
+      <?php print $data['esd_hs_2013']['progress_pts']; ?> /
+      <?php print $data['esd_hs_2013']['progress_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -462,11 +462,11 @@ grade, rather may earn a “Promising” designation by:</p>
       to 2012-13)
     </TD>
     <TD>
-      <?php print $data['act_grwth']; ?>
+      <?php print $data['esd_hs_2013']['act_grwth']; ?>
     </TD>
     <TD>
-      <?php print $data['act_grwth_pts']; ?> /
-      <?php print $data['act_grwth_psspts']; ?>
+      <?php print $data['esd_hs_2013']['act_grwth_pts']; ?> /
+      <?php print $data['esd_hs_2013']['act_grwth_psspts']; ?>
     </TD>
     <TD>
       <BR>
@@ -489,11 +489,11 @@ grade, rather may earn a “Promising” designation by:</p>
       
     </TD>
     <TD>
-      <?php print $data['culture_pts']; ?> /
-      <?php print $data['culture_psspts']; ?>
+      <?php print $data['esd_hs_2013']['culture_pts']; ?> /
+      <?php print $data['esd_hs_2013']['culture_psspts']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_hs_2013']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR VALIGN=TOP>
@@ -501,11 +501,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Site Visit Average Score
     </TD>
     <TD>
-      <?php print $data['site_s']; ?>
+      <?php print $data['esd_hs_2013']['site_s']; ?>
     </TD>
     <TD>
-      <?php print $data['site_s_pts']; ?> /
-      <?php print $data['site_s_psspts']; ?>
+      <?php print $data['esd_hs_2013']['site_s_pts']; ?> /
+      <?php print $data['esd_hs_2013']['site_s_psspts']; ?>
     </TD>
     <TD>
       <BR>
@@ -518,12 +518,12 @@ grade, rather may earn a “Promising” designation by:</p>
       (2012-13) Score
     </TD>
     <TD>
-      <?php print $data['net5e_1213']; ?>
+      <?php print $data['esd_hs_2013']['net5e_1213']; ?>
     </TD>
     <TD>
-      <?php print $data['net5e_1213_pts']; ?>
+      <?php print $data['esd_hs_2013']['net5e_1213_pts']; ?>
       /
-      <?php print $data['net5e_1213_psspts']; ?>
+      <?php print $data['esd_hs_2013']['net5e_1213_psspts']; ?>
     </TD>
     <TD>
       <BR>
@@ -535,11 +535,11 @@ grade, rather may earn a “Promising” designation by:</p>
       5Essentials Growth Score
     </TD>
     <TD>
-      <?php print $data['five_e_grwth']; ?>
+      <?php print $data['esd_hs_2013']['five_e_grwth']; ?>
     </TD>
     <TD>
-      <?php print $data['five_e_grwth_pts']; ?> /
-      <?php print $data['five_e_grwth_psspts']; ?>
+      <?php print $data['esd_hs_2013']['five_e_grwth_pts']; ?> /
+      <?php print $data['esd_hs_2013']['five_e_grwth_psspts']; ?>
     </TD>
     <TD>
       <BR>
@@ -561,8 +561,8 @@ grade, rather may earn a “Promising” designation by:</p>
       
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?> +
-      <?php print $data['fafsa_rate_pts']; ?>
+      <?php print $data['esd_hs_2013']['studchrs_pts']; ?> +
+      <?php print $data['esd_hs_2013']['fafsa_rate_pts']; ?>
     </TD>
   </TR>
   <TR>
@@ -584,21 +584,21 @@ grade, rather may earn a “Promising” designation by:</p>
       Total
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?>
+      <?php print $data['esd_hs_2013']['studchrs_pts']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <?php print $data['econdis_pct']; ?>
+      <?php print $data['esd_hs_2013']['econdis_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['sped_pct']; ?>
+      <?php print $data['esd_hs_2013']['sped_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['ell_pct']; ?>
+      <?php print $data['esd_hs_2013']['ell_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['studchrs']; ?>
+      <?php print $data['esd_hs_2013']['studchrs']; ?>
     </TD>
   </TR>
   <TR>
@@ -606,18 +606,17 @@ grade, rather may earn a “Promising” designation by:</p>
       FAFSA Completion Rate
     </TD>
     <TD>
-      <?php print $data['fafsa_rate']; ?>
+      <?php print $data['esd_hs_2013']['fafsa_rate']; ?>
     </TD>
     <TD>
-      <?php print $data['fafsa_rate_pts']; ?>
+      <?php print $data['esd_hs_2013']['fafsa_rate_pts']; ?>
     </TD>
   </TR>
 </TABLE>
 
 <?php endif; ?>
 
-<?php if ($k8_data): ?>
-<?php $data = $k8_data; ?>
+<?php if (count($data['esd_k8_2013_r1']) > 1): ?>
 
 <?php if ($school_status == 'Mature'): ?>
 <p>K-8 Schools are graded using the following scale:</p>
@@ -705,60 +704,6 @@ grade, rather may earn a “Promising” designation by:</p>
   </TR>
 </TABLE>
 
-<TABLE class="grading-scale">
-  <COL>
-  <COL>
-  <TR>
-    <TD>
-      Total
-      Points (100  Points)
-    </TD>
-    <TD>
-      &nbsp;
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      &nbsp;
-    </TD>
-    <TD>
-      <I>Points Possible</I>
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      Academic Status
-    </TD>
-    <TD>
-      30
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      Academic Progress
-    </TD>
-    <TD>
-      40
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      School Culture
-    </TD>
-    <TD>
-      30
-    </TD>
-  </TR>
-  <TR>
-    <TD>
-      Total
-    </TD>
-    <TD>
-      100
-    </TD>
-  </TR>
-</TABLE>
-
 <TABLE>
   <COL style="width:16em;">
   <COL>
@@ -768,11 +713,10 @@ grade, rather may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['pts_earned']; ?> /
-      <?php print $data['pts_possible']; ?> = <?php print $data['mature_pct']; ?>
+      <?php print $data['esd_k8_2013_r1']['total_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['mature_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['total_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -780,11 +724,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Academic Status Grade
     </TD>
     <TD>
-      <?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_status']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_status']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -792,11 +736,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Academic Progress Grade
     </TD>
     <TD>
-      <?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_progress']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_progress']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -804,11 +748,11 @@ grade, rather may earn a “Promising” designation by:</p>
       School Climate Grade
     </TD>
     <TD>
-      <?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_culture']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_culture']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -816,7 +760,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Other Points (Bonus)
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?>
+      <?php print $data['esd_k8_2013_r1']['studchrs_pts']; ?>
     </TD>
     <TD>
       <BR>
@@ -848,11 +792,10 @@ may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['pts_earned']; ?> /
-      <?php print $data['pts_possible']; ?> = <?php print $data['newschool_pct']; ?>
+      <?php print $data['esd_k8_2013_r1']['total_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['newschool_designation']; ?>
+      <?php print $data['esd_k8_2013_r1']['total_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -860,11 +803,11 @@ may earn a “Promising” designation by:</p>
       Academic Status Grade
     </TD>
     <TD>
-      <?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_status']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_status']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -872,11 +815,11 @@ may earn a “Promising” designation by:</p>
       Academic Progress Grade
     </TD>
     <TD>
-      <?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_progress']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_progress']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -884,11 +827,11 @@ may earn a “Promising” designation by:</p>
       School Climate Grade
     </TD>
     <TD>
-      <?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_culture']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_culture']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -896,7 +839,7 @@ may earn a “Promising” designation by:</p>
       Other Points (Bonus)
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?>
+      <?php print $data['esd_k8_2013_r1']['studchrs_pts']; ?>
     </TD>
     <TD>
       <BR>
@@ -930,11 +873,10 @@ grade, rather may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['turnaround_pts_earned']; ?>
-      / <?php print $data['turnaround_pts_possible']; ?> = <?php print $data['turnaround_pct']; ?>
+      <?php print $data['esd_k8_2013_r1']['total_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['turnaround_designation']; ?>
+      <?php print $data['esd_k8_2013_r1']['total_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -942,11 +884,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Academic Status Grade
     </TD>
     <TD>
-      <?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_status']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_status']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -954,11 +896,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Academic Progress Grade
     </TD>
     <TD>
-      <?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_progress']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_progress']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -966,11 +908,11 @@ grade, rather may earn a “Promising” designation by:</p>
       School Climate Grade
     </TD>
     <TD>
-      <?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_culture']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_culture']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -978,11 +920,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Other Points (Bonus)
     </TD>
     <TD>
-      <?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_status']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_status']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -991,11 +933,11 @@ grade, rather may earn a “Promising” designation by:</p>
       (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['pr2_math']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_math']; ?>
     </TD>
     <TD>
-      <?php print $data['pr2_math_pts']; ?> /
-      <?php print $data['pr2_math_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_math_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['pr2_math_ptsps']; ?>
     </TD>
   </TR>
   <TR>
@@ -1004,11 +946,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Proficiency Rate (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['pr2_ela']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_ela']; ?>
     </TD>
     <TD>
-      <?php print $data['pr2_ela_pts']; ?> /
-      <?php print $data['pr2_ela_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_ela_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['pr2_ela_ptsps']; ?>
     </TD>
   </TR>
   <TR>
@@ -1017,11 +959,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Social Studies) Proficiency Rate (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['pr2_other']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_other']; ?>
     </TD>
     <TD>
-      <?php print $data['pr2_other_pts']; ?> /
-      <?php print $data['pr2_other_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_other_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['pr2_other_ptsps']; ?>
     </TD>
   </TR>
 </TABLE>
@@ -1046,11 +988,11 @@ grade, rather may earn a “Promising” designation by:</p>
       
     </TD>
     <TD>
-      <?php print $data['pts_status']; ?> /
-      <?php print $data['ptspos_status']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_status']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_status']; ?>
     </TD>
     <TD>
-      <?php print $data['status_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['status_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -1059,11 +1001,11 @@ grade, rather may earn a “Promising” designation by:</p>
       (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['pr2_math']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_math']; ?>
     </TD>
     <TD>
-      <?php print $data['pr2_math_pts']; ?> /
-      <?php print $data['pr2_math_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_math_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['pr2_math_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1076,11 +1018,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Proficiency Rate (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['pr2_ela']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_ela']; ?>
     </TD>
     <TD>
-      <?php print $data['pr2_ela_pts']; ?> /
-      <?php print $data['pr2_ela_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_ela_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['pr2_ela_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1093,11 +1035,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Social Studies) Proficiency Rate (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['pr2_other']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_other']; ?>
     </TD>
     <TD>
-      <?php print $data['pr2_other_pts']; ?> /
-      <?php print $data['pr2_other_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['pr2_other_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['pr2_other_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1120,11 +1062,11 @@ grade, rather may earn a “Promising” designation by:</p>
       
     </TD>
     <TD>
-      <?php print $data['pts_progress']; ?> /
-      <?php print $data['ptspos_progress']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_progress']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_progress']; ?>
     </TD>
     <TD>
-      <?php print $data['progress_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['progress_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -1133,11 +1075,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Score
     </TD>
     <TD>
-      <?php print $data['plc_comp']; ?>
+      <?php print $data['esd_k8_2013_r1']['plc_comp']; ?>
     </TD>
     <TD>
-      <?php print $data['plc_comp_pts']; ?> /
-      <?php print $data['plc_comp_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['plc_comp_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['plc_comp_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1150,11 +1092,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Meeting Growth Target
     </TD>
     <TD>
-      <?php print $data['bench_comp']; ?>
+      <?php print $data['esd_k8_2013_r1']['bench_comp']; ?>
     </TD>
     <TD>
-      <?php print $data['bench_comp_pts']; ?> /
-      <?php print $data['bench_comp_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['bench_comp_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['bench_comp_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1177,11 +1119,11 @@ grade, rather may earn a “Promising” designation by:</p>
       
     </TD>
     <TD>
-      <?php print $data['pts_culture']; ?> /
-      <?php print $data['ptspos_culture']; ?>
+      <?php print $data['esd_k8_2013_r1']['pts_culture']; ?> /
+      <?php print $data['esd_k8_2013_r1']['ptspos_culture']; ?>
     </TD>
     <TD>
-      <?php print $data['culture_ltrgrade']; ?>
+      <?php print $data['esd_k8_2013_r1']['culture_ltrgrade']; ?>
     </TD>
   </TR>
   <TR>
@@ -1189,11 +1131,11 @@ grade, rather may earn a “Promising” designation by:</p>
       Site Visit Average Score
     </TD>
     <TD>
-      <?php print $data['site_s']; ?>
+      <?php print $data['esd_k8_2013_r1']['site_s']; ?>
     </TD>
     <TD>
-      <?php print $data['site_s_pts']; ?> /
-      <?php print $data['site_s_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['site_s_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['site_s_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1206,12 +1148,12 @@ grade, rather may earn a “Promising” designation by:</p>
       (2012-13) Score
     </TD>
     <TD>
-      <?php print $data['net5e_1213']; ?>
+      <?php print $data['esd_k8_2013_r1']['net5e_1213']; ?>
     </TD>
     <TD>
-      <?php print $data['net5e_1213_pts']; ?>
+      <?php print $data['esd_k8_2013_r1']['net5e_1213_pts']; ?>
       /
-      <?php print $data['net5e_1213_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['net5e_1213_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1223,11 +1165,11 @@ grade, rather may earn a “Promising” designation by:</p>
       5Essentials Growth Score
     </TD>
     <TD>
-      <?php print $data['five_e_grwth']; ?>
+      <?php print $data['esd_k8_2013_r1']['five_e_grwth']; ?>
     </TD>
     <TD>
-      <?php print $data['five_e_grwth_pts']; ?> /
-      <?php print $data['five_e_grwth_ptsps']; ?>
+      <?php print $data['esd_k8_2013_r1']['five_e_grwth_pts']; ?> /
+      <?php print $data['esd_k8_2013_r1']['five_e_grwth_ptsps']; ?>
     </TD>
     <TD>
       <BR>
@@ -1252,7 +1194,7 @@ grade, rather may earn a “Promising” designation by:</p>
       
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?>
+      <?php print $data['esd_k8_2013_r1']['studchrs_pts']; ?>
     </TD>
   </TR>
   <TR>
@@ -1274,21 +1216,21 @@ grade, rather may earn a “Promising” designation by:</p>
       Total
     </TD>
     <TD>
-      <?php print $data['studchrs_pts']; ?>
+      <?php print $data['esd_k8_2013_r1']['studchrs_pts']; ?>
     </TD>
   </TR>
   <TR>
     <TD>
-      <?php print $data['econdis_pct']; ?>
+      <?php print $data['esd_k8_2013']['econdis_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['sped_pct']; ?>
+      <?php print $data['esd_k8_2013']['sped_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['ell_pct']; ?>
+      <?php print $data['esd_k8_2013']['ell_pct']; ?>
     </TD>
     <TD>
-      <?php print $data['studchrs']; ?>
+      <?php print $data['esd_k8_2013_r1']['studchrs']; ?>
     </TD>
   </TR>
 </TABLE>
