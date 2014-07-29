@@ -1,4 +1,4 @@
-<h3><?php print $year; ?> scores for <?php print $school->name; ?></h3>
+<h3>Scores for <?php print $school->name; ?></h3>
 <?php if ($message): ?>
 <?php print $message; ?>
 <?php endif; ?>
@@ -210,7 +210,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['esd_hs_2014']['total_pct']; ?>
+      <?php print round($data['esd_hs_2014']['total_pct']*100, 2); ?>%
     </TD>
     <TD>
       <?php print $data['esd_hs_2014']['total_ltrgrade']; ?>
@@ -294,7 +294,7 @@ grade, rather may earn a “Promising” designation by:</p>
       to 2012-13)
     </TD>
     <TD>
-      <?php print $data['esd_hs_2014']['act_grwth']; ?>
+      <?php print round($data['esd_hs_2014']['act_grwth'], 2); ?>
     </TD>
     <TD>
       <?php print $data['esd_hs_2014']['act_grwth_pts']; ?> /
@@ -333,7 +333,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Site Visit Average Score
     </TD>
     <TD>
-      <?php print $data['esd_hs_2014']['site_s']; ?>
+      <?php print round($data['esd_hs_2014']['site_s'], 2); ?>
     </TD>
     <TD>
       <?php print $data['esd_hs_2014']['site_s_pts']; ?> /
@@ -367,7 +367,7 @@ grade, rather may earn a “Promising” designation by:</p>
       5Essentials Growth Score
     </TD>
     <TD>
-      <?php print $data['esd_hs_2014']['five_e_grwth']; ?>
+      <?php print round($data['esd_hs_2014']['five_e_grwth'], 1); ?>
     </TD>
     <TD>
       <?php print $data['esd_hs_2014']['five_e_grwth_pts']; ?> /
@@ -420,16 +420,16 @@ grade, rather may earn a “Promising” designation by:</p>
   </TR>
   <TR>
     <TD>
-      <?php print $data['esd_hs_2013']['econdis_pct']; ?>
+      <?php print round($data['esd_hs_2013']['econdis_pct']*100, 2); ?>%
     </TD>
     <TD>
-      <?php print $data['esd_hs_2013']['sped_pct']; ?>
+      <?php print round($data['esd_hs_2013']['sped_pct']*100, 2); ?>%
     </TD>
     <TD>
-      <?php print $data['esd_hs_2013']['ell_pct']; ?>
+      <?php print round($data['esd_hs_2013']['ell_pct']*100, 2); ?>%
     </TD>
     <TD>
-      <?php print $data['esd_hs_2014']['studchrs']; ?>
+      <?php print round($data['esd_hs_2014']['studchrs']*100, 2); ?>%
     </TD>
   </TR>
 </TABLE>
@@ -635,7 +635,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Cumulative Grade
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['total_pct']; ?>
+      <?php print round($data['esd_k8_2014']['total_pct']*100, 2); ?>%
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['total_ltrgrade']; ?>
@@ -718,7 +718,7 @@ grade, rather may earn a “Promising” designation by:</p>
       (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['pr2_math']; ?>
+      <?php print round($data['esd_k8_2014']['pr2_math']*100, 2); ?>%
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['pr2_math_pts']; ?> /
@@ -735,7 +735,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Proficiency Rate (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['pr2_ela']; ?>
+      <?php print round($data['esd_k8_2014']['pr2_ela']*100, 2); ?>%
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['pr2_ela_pts']; ?> /
@@ -752,7 +752,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Social Studies) Proficiency Rate (2-Year Average)
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['pr2_other']; ?>
+      <?php print round($data['esd_k8_2014']['pr2_other']*100, 2); ?>%
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['pr2_other_pts']; ?> /
@@ -792,7 +792,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Score
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['plc_comp']; ?>
+      <?php print round($data['esd_k8_2014']['plc_comp']*100, 2); ?>%
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['plc_comp_pts']; ?> /
@@ -809,7 +809,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Meeting Growth Target
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['bench_comp']; ?>
+      <?php print round($data['esd_k8_2014']['bench_comp']*100, 2); ?>%
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['bench_comp_pts']; ?> /
@@ -848,7 +848,7 @@ grade, rather may earn a “Promising” designation by:</p>
       Site Visit Average Score
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['site_s']; ?>
+      <?php print round($data['esd_k8_2014']['site_s'], 2); ?>
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['site_s_pts']; ?> /
@@ -882,7 +882,7 @@ grade, rather may earn a “Promising” designation by:</p>
       5Essentials Growth Score
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['five_e_grwth']; ?>
+      <?php print round($data['esd_k8_2014']['five_e_grwth'], 1); ?>
     </TD>
     <TD>
       <?php print $data['esd_k8_2014']['five_e_grwth_pts']; ?> /
@@ -947,7 +947,7 @@ grade, rather may earn a “Promising” designation by:</p>
       <?php print round($data['esd_k8_2013']['ell_pct']*100, 2); ?>%
     </TD>
     <TD>
-      <?php print $data['esd_k8_2014']['studchrs']; ?>
+      <?php print round($data['esd_k8_2014']['studchrs']*100, 2); ?>%
     </TD>
   </TR>
 </TABLE>
