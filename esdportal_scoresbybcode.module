@@ -25,10 +25,17 @@ function esdportal_scoresbybcode_permission() {
  * Implements hook_menu().
  */
 function esdportal_scoresbybcode_menu() {
-  $items['schoolscores/%'] = array(
-    'title' => 'School scores',
+  $items['schoolscores/2013/%'] = array(
+    'title' => '2013 School scores',
     'page callback' => 'esdportal_scoresbybcode_page',
-    'page arguments' => array(1),
+    'page arguments' => array(2, 1),
+    'access arguments' => array('access school scores'),
+    'type' => MENU_CALLBACK,
+  );
+  $items['schoolscores/2014/%'] = array(
+    'title' => '2014 School scores',
+    'page callback' => 'esdportal_scoresbybcode_page',
+    'page arguments' => array(2, 1),
     'access arguments' => array('access school scores'),
     'type' => MENU_CALLBACK,
   );
@@ -57,9 +64,13 @@ function esdportal_scoresbybcode_menu() {
  */
 function esdportal_scoresbybcode_theme() {
   return array(
-    'esdportal_scoresbybcode' => array(
+    'esdportal_scoresbybcode_2013' => array(
       'variables' => array(),
-      'template' => 'esdportal-scoresbybcode',
+      'template' => 'esdportal-scoresbybcode-2013',
+    ),
+    'esdportal_scoresbybcode_2014' => array(
+      'variables' => array(),
+      'template' => 'esdportal-scoresbybcode-2014',
     ),
   );
 }
@@ -106,11 +117,17 @@ function esdportal_scoresbybcode_admin() {
   return system_settings_form($form);
 }
 
-function esdportal_scoresbybcode_page($bcode) {
+function esdportal_scoresbybcode_page($bcode, $year) {
   // Validate bcode
   $bcode = intval($bcode);
   if ($bcode < 1) {
     return t('Please provide a numeric bcode.');
+  }
+
+  // Validate year
+  $year = intval($year);
+  if ($year < 1) {
+    return t('Please provide a numeric year.');
   }
 
   // Load school term by bcode
@@ -121,11 +138,15 @@ function esdportal_scoresbybcode_page($bcode) {
   }
   $school_status = taxonomy_term_load($school->field_school_scorecard_status['und'][0]['tid']);
 
+  // some templates need all years... icky.
   $data = array(
     'esd_hs_2013' => db_query("SELECT * FROM {esd_hs_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc(),
     'esd_k8_2013' => db_query("SELECT * FROM {esd_k8_2013} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc(),
     'esd_k8_2013_r1' => db_query("SELECT * FROM {esd_k8_2013_r1} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc(),
+    'esd_hs_2014' => db_query("SELECT * FROM {esd_hs_2014} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc(),
+    'esd_k8_2014' => db_query("SELECT * FROM {esd_k8_2014} WHERE buildingcode = :bcode", array(':bcode' => $bcode))->fetchAssoc(),
   );
+
 
   $message = array(
     'alert' => array(
@@ -137,7 +158,7 @@ function esdportal_scoresbybcode_page($bcode) {
 
   $form = drupal_render(drupal_get_form('esdportal_scoresbybcode_form'));
 
-  return theme('esdportal_scoresbybcode', array('message' => $message, 'school' => $school, 'school_status' => $school_status->name, 'school_status_lc' => strtolower($school_status->name), 'data' => $data, 'form' => $form));
+  return theme('esdportal_scoresbybcode_' . $year, array('message' => $message, 'year' => $year, 'school' => $school, 'school_status' => $school_status->name, 'school_status_lc' => strtolower($school_status->name), 'data' => $data, 'form' => $form));
 }
 
 /**
