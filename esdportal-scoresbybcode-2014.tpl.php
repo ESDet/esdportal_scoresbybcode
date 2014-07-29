@@ -110,7 +110,7 @@
 </TABLE>
 
 <?php endif; if ($school_status == 'New'): ?>
-
+<p>High Schools are graded using the following scale:</p>
 <p>
 Your school is classified as a
 “New School.” New Schools do not earn a cumulative grade, rather
@@ -126,7 +126,7 @@ may earn a “Promising” designation by:</p>
 </OL>
 
 <?php endif; if ($school_status == 'Turnaround'): ?>
-
+<p>High Schools are graded using the following scale:</p>
 <p>Your school is classified as a
 “Fresh Start School.” Fresh Start Schools are exempt from Status
 counting towards their score and therefore do not earn a cumulative
@@ -535,7 +535,7 @@ grade, rather may earn a “Promising” designation by:</p>
 </TABLE>
 
 <?php endif; if ($school_status == 'New'): ?>
-
+<p>K-8 Schools are graded using the following scale:</p>
 <p>Your school is classified as a
 “New School.” New Schools do not earn a cumulative grade, rather
 may earn a “Promising” designation by:</p>
@@ -550,7 +550,7 @@ may earn a “Promising” designation by:</p>
 </OL>
 
 <?php endif; if ($school_status == 'Turnaround'): ?>
-
+<p>K-8 Schools are graded using the following scale:</p>
 <p>
 Your school is classified as a
 “Fresh Start School.” Fresh Start Schools are exempt from Status
