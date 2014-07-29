@@ -1,4 +1,4 @@
-<h3>Scores for <?php print $school->name; ?></h3>
+<h3><?php print $year; ?> scores for <?php print $school->name; ?></h3>
 <?php if ($message): ?>
 <?php print $message; ?>
 <?php endif; ?>
